@@ -17,6 +17,14 @@ class DesktopPanel: NSWindow {
         
         self.level = NSWindow.Level(rawValue: NSWindow.Level.RawValue(CGWindowLevelForKey(CGWindowLevelKey.desktopWindow) - 1))
         
+        self.collectionBehavior = (NSWindow.CollectionBehavior(rawValue: NSWindow.CollectionBehavior.RawValue(UInt8(NSWindow.CollectionBehavior.canJoinAllSpaces.rawValue) |
+            UInt8(NSWindow.CollectionBehavior.stationary.rawValue) |
+            UInt8(NSWindow.CollectionBehavior.ignoresCycle.rawValue)))
+        )
+        
+        self.backgroundColor = NSColor.clear
+        self.isOpaque = false
+        
     }
     
     override var canBecomeMain: Bool{
