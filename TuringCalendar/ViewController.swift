@@ -57,3 +57,10 @@ class ViewController: NSViewController {
 
 }
 
+extension PDFView{
+    open override func hitTest(_ point: NSPoint) -> NSView? {
+        return nil
+    }
+    
+}
+
