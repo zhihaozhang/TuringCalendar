@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <plugIn identifier="com.apple.pdfkit.ibplugin" version="13771"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -678,17 +679,21 @@
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="-5" y="-448"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" titleVisibility="hidden" id="IQv-IB-iLA" customClass="DesktopPanel" customModule="TuringCalendar" customModuleProvider="target">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                <windowController id="B8D-0N-5wS" customClass="windowController" customModule="TuringCalendar" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hasShadow="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" titleVisibility="hidden" id="IQv-IB-iLA" customClass="DesktopPanel" customModule="TuringCalendar" customModuleProvider="target">
+                        <windowStyleMask key="styleMask" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="1200" y="745" width="480" height="270"/>
+                        <rect key="contentRect" x="1085" y="185" width="595" height="842"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="595" height="842"/>
+                        <value key="maxSize" type="size" width="595" height="842"/>
+                        <value key="minFullScreenContentSize" type="size" width="595" height="842"/>
+                        <value key="maxFullScreenContentSize" type="size" width="595" height="842"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -699,20 +704,34 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="52" y="181"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="TuringCalendar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="595" height="842"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <pdfView autoresizesSubviews="NO" wantsLayer="YES" displaysPageBreaks="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ihg-f8-jJJ">
+                                <rect key="frame" x="0.0" y="0.0" width="595" height="842"/>
+                            </pdfView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Ihg-f8-jJJ" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="6YB-N3-BdP"/>
+                            <constraint firstAttribute="trailing" secondItem="Ihg-f8-jJJ" secondAttribute="trailing" id="FXZ-fA-DYI"/>
+                            <constraint firstAttribute="bottom" secondItem="Ihg-f8-jJJ" secondAttribute="bottom" id="sYF-IC-Ts1"/>
+                            <constraint firstItem="Ihg-f8-jJJ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="z1Z-0o-tBH"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="calendarViewer" destination="Ihg-f8-jJJ" id="K3b-rj-lxp"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="1395"/>
         </scene>
     </scenes>
 </document>

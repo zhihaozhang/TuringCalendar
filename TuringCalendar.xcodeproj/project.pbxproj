@@ -12,6 +12,8 @@
 		CE3A5FC8202C3938005A6D5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3A5FC7202C3938005A6D5C /* Assets.xcassets */; };
 		CE3A5FCB202C3938005A6D5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3A5FC9202C3938005A6D5C /* Main.storyboard */; };
 		CE3A5FD4202C394F005A6D5C /* DesktopPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A5FD3202C394F005A6D5C /* DesktopPanel.swift */; };
+		CE3A5FD6202C44B5005A6D5C /* calendar.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CE3A5FD5202C44B5005A6D5C /* calendar.pdf */; };
+		CE3A5FD8202C4FF5005A6D5C /* windowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A5FD7202C4FF5005A6D5C /* windowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		CE3A5FCC202C3938005A6D5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE3A5FCD202C3938005A6D5C /* TuringCalendar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TuringCalendar.entitlements; sourceTree = "<group>"; };
 		CE3A5FD3202C394F005A6D5C /* DesktopPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopPanel.swift; sourceTree = "<group>"; };
+		CE3A5FD5202C44B5005A6D5C /* calendar.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = calendar.pdf; sourceTree = "<group>"; };
+		CE3A5FD7202C4FF5005A6D5C /* windowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = windowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 		CE3A5FC2202C3938005A6D5C /* TuringCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				CE3A5FD5202C44B5005A6D5C /* calendar.pdf */,
 				CE3A5FC3202C3938005A6D5C /* AppDelegate.swift */,
 				CE3A5FC5202C3938005A6D5C /* ViewController.swift */,
 				CE3A5FC7202C3938005A6D5C /* Assets.xcassets */,
@@ -62,6 +67,7 @@
 				CE3A5FCC202C3938005A6D5C /* Info.plist */,
 				CE3A5FCD202C3938005A6D5C /* TuringCalendar.entitlements */,
 				CE3A5FD3202C394F005A6D5C /* DesktopPanel.swift */,
+				CE3A5FD7202C4FF5005A6D5C /* windowController.swift */,
 			);
 			path = TuringCalendar;
 			sourceTree = "<group>";
@@ -126,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE3A5FC8202C3938005A6D5C /* Assets.xcassets in Resources */,
+				CE3A5FD6202C44B5005A6D5C /* calendar.pdf in Resources */,
 				CE3A5FCB202C3938005A6D5C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE3A5FD4202C394F005A6D5C /* DesktopPanel.swift in Sources */,
+				CE3A5FD8202C4FF5005A6D5C /* windowController.swift in Sources */,
 				CE3A5FC6202C3938005A6D5C /* ViewController.swift in Sources */,
 				CE3A5FC4202C3938005A6D5C /* AppDelegate.swift in Sources */,
 			);

@@ -25,6 +25,7 @@ class DesktopPanel: NSWindow {
         self.backgroundColor = NSColor.clear
         self.isOpaque = false
         
+        
     }
     
     override var canBecomeMain: Bool{
