@@ -1,6 +1,7 @@
 # TuringCalendar
 图灵日历 for mac
 
+![App icon](https://ws2.sinaimg.cn/large/006tNc79ly1foa07bfam5j3074074wey.jpg)
 
 [图灵日历介绍](http://www.ituring.com.cn/book/details/2625)，图灵教育退出的**限量款编程日历2018**，因为简约大气的设计和每周一个编程语言的介绍，在程序员中广受欢迎。
 
