@@ -9,6 +9,8 @@
 
 ![](https://ws1.sinaimg.cn/large/006tNc79ly1fo9z6yw8fuj31dm1hkx6p.jpg)
 
+对实现细节感兴趣的朋友可以参考我的[博客](http://zhihaozhang.github.io/2018/02/10/turingCal/)，其中有实现的相对详细的介绍。
+
 ![](https://ws2.sinaimg.cn/large/006tNc79ly1foaaqel4dwj30u011i448.jpg)
 
 # License
