@@ -14,11 +14,6 @@ class ViewController: NSViewController {
     
     @IBOutlet var calendarViewer: PDFView!
     
-    @IBOutlet var statusMenu: NSMenu!
-    @IBOutlet weak var pdfItem: NSMenuItem!
-    let statusBar = NSStatusBar()
-    var statusItem = NSStatusItem()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,7 +35,6 @@ class ViewController: NSViewController {
 
 
         // Do any additional setup after loading the view.
-        setStatusBar()
     }
 
     override var representedObject: Any? {
@@ -58,17 +52,9 @@ class ViewController: NSViewController {
         return components.weekOfYear!;
     }
   
-    func setStatusBar() {
-        statusItem = statusBar.statusItem(withLength: -1.0)
-        statusItem.image = #imageLiteral(resourceName: "statusIcon")
-        statusItem.menu = statusMenu
-        pdfItem.view = calendarViewer
-    }
-
-    @IBAction func quitAction(_ sender: NSMenuItem) {
-        NSApplication.shared.terminate(self)
-    }
     
+
+
 }
 
 extension PDFView{

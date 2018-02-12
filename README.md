@@ -9,10 +9,6 @@
 
 ![](https://ws1.sinaimg.cn/large/006tNc79ly1fo9z6yw8fuj31dm1hkx6p.jpg)
 
-添加了状态栏图标，无需返回桌面，仅需点击状态栏图标，即可欣赏图灵编程日历，效果图如下
-![](http://rayzhao98.top/wp-content/uploads/2018/02/WX20180212-144719.png)
-
-
 对实现细节感兴趣的朋友可以参考我的[博客](http://zhihaozhang.github.io/2018/02/10/turingCal/)，其中有实现的相对详细的介绍。
 
 ![](https://ws2.sinaimg.cn/large/006tNc79ly1foaaqel4dwj30u011i448.jpg)
