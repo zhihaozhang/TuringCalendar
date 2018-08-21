@@ -10,36 +10,49 @@ import Cocoa
 import Quartz
 
 class ViewController: NSViewController {
-
+    
     
     @IBOutlet var calendarViewer: PDFView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadCalendar()
+        refresh()
         
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    func loadCalendar(){
         let url = Bundle.main.url(forResource: "calendar", withExtension: "pdf")
         let pdf = PDFDocument(url: url!)
         
-//        print(pdf?.pageCount) // number of pages in document
-//        print(pdf?.string) // entire text of document
+        //        print(pdf?.pageCount) // number of pages in document
+        //        print(pdf?.string) // entire text of document
         
-      //  calendarViewer = PDFView(frame: CGRect(x: 0, y: 0, width: 500, height: 750))
+        //  calendarViewer = PDFView(frame: CGRect(x: 0, y: 0, width: 500, height: 750))
         
         let today = GetWeekByDate(date: Date())
         
         
         calendarViewer.document = pdf
         calendarViewer.go(to: (pdf?.page(at: today-1))!)
-        
-        
-
-
-        // Do any additional setup after loading the view.
     }
-
+    
+    func refresh(){
+        let url = Bundle.main.url(forResource: "calendar", withExtension: "pdf")
+        let pdf = PDFDocument(url: url!)
+        let today = GetWeekByDate(date: Date())
+        calendarViewer.go(to: (pdf?.page(at: today-1))!)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1) {
+            
+            self.refresh()
+        }
+    }
+    
     override var representedObject: Any? {
         didSet {
-        // Update the view, if already loaded.
+            // Update the view, if already loaded.
         }
     }
     
@@ -48,13 +61,13 @@ class ViewController: NSViewController {
             return 0
         }
         let components = calendar.components([.weekOfYear,.weekOfMonth,.weekday,.weekdayOrdinal], from: date)
-       
+        
         return components.weekOfYear!;
     }
-  
     
-
-
+    
+    
+    
 }
 
 extension PDFView{

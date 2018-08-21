@@ -105,6 +105,11 @@
 					CE3A5FBF202C3938005A6D5C = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -278,9 +283,10 @@
 				CODE_SIGN_ENTITLEMENTS = TuringCalendar/TuringCalendar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2JY6F4ZP47;
+				DEVELOPMENT_TEAM = P48TU896KM;
 				INFOPLIST_FILE = TuringCalendar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = zhihao.fudan.TuringCalendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -294,9 +300,10 @@
 				CODE_SIGN_ENTITLEMENTS = TuringCalendar/TuringCalendar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 2JY6F4ZP47;
+				DEVELOPMENT_TEAM = P48TU896KM;
 				INFOPLIST_FILE = TuringCalendar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = zhihao.fudan.TuringCalendar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
