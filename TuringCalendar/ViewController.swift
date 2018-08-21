@@ -17,7 +17,7 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadCalendar()
-        refresh()
+//        refresh()
         
         
         // Do any additional setup after loading the view.
@@ -39,16 +39,16 @@ class ViewController: NSViewController {
         calendarViewer.go(to: (pdf?.page(at: today-1))!)
     }
     
-    func refresh(){
-        let url = Bundle.main.url(forResource: "calendar", withExtension: "pdf")
-        let pdf = PDFDocument(url: url!)
-        let today = GetWeekByDate(date: Date())
-        calendarViewer.go(to: (pdf?.page(at: today-1))!)
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1) {
-            
-            self.refresh()
-        }
-    }
+//    func refresh(){
+//        let url = Bundle.main.url(forResource: "calendar", withExtension: "pdf")
+//        let pdf = PDFDocument(url: url!)
+//        let today = GetWeekByDate(date: Date())
+//        calendarViewer.go(to: (pdf?.page(at: today-1))!)
+//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1) {
+//
+//            self.refresh()
+//        }
+//    }
     
     override var representedObject: Any? {
         didSet {
