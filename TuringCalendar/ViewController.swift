@@ -23,7 +23,7 @@ class ViewController: NSViewController {
         
         calendarViewer.document = pdf
         calendarViewer.go(to: (pdf?.page(at: today-1))!)
-//        refresh(pdf!)
+        refresh(pdf!)
         
     }
 
@@ -52,10 +52,6 @@ class ViewController: NSViewController {
         
         return components.weekOfYear!;
     }
-    
-    
-    
-    
 }
 
 extension PDFView{
