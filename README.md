@@ -10,9 +10,8 @@
 
 
 <p align="center">  
-  <a href=https://itunes.apple.com/cn/app/invisibility-cloak/id1426266978?mt=12>
   <img alt="img" src="https://ws1.sinaimg.cn/large/006tNbRwly1fuklkrutwkj31kw0zkn2g.jpg" width=1000>
-  <p>(推荐使用以白色为主体的背景图片)</p>
+  <p align="center">推荐使用以白色为主体的背景图片</p>
   </a>
 </p>
 
